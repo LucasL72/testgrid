@@ -1,0 +1,180 @@
+
+/*-----Vue d'ensemble------*/
+body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: grid;
+    grid-template-rows: 7vh 1fr auto auto auto;
+    grid-template-columns: repeat(4);
+    grid-template-areas:
+        "nav nav nav nav"
+        "header header header header"
+        "main main main main"
+        "contact contact contact contact"
+        "footer footer footer footer"
+}
+/*-----Outils flex------*/
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.col{
+display: flex;
+flex-direction: column;
+}
+.marg10 {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.marginauto{
+    margin: auto;
+}
+.txtaligncenter{
+    text-align: center;
+    justify-content: center;
+}
+
+/*-----Navbar------*/
+nav {
+    grid-area: nav;
+    justify-content: space-between;
+    background-color: rgb(7, 124, 7);
+}
+
+.ulnavbar {
+    list-style: none;
+    overflow: hidden;
+}
+
+.linavbar {
+    float: left;
+}
+
+.linavbar a {
+    display: block;
+    color: black;
+    text-align: center;
+    text-indent: 30px;
+    letter-spacing: 1px;
+}
+
+
+/*-----header------*/
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-style: double;
+    background-image: url(https://diapogram.com/_data/i/upload/2019/04/11/20190411234429-79e7caa4-me.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: 1px solid black;
+    max-width: 100%;
+    height: 400px;
+}
+
+.bg-green {
+    background-color: green;
+    margin: auto;
+}
+
+.bg-blue {
+    background-color: blue;
+    margin: auto;
+}
+
+/*-----main------*/
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 7vh auto auto 75%;
+    grid-template-columns: repeat(2);
+    grid-template-areas:
+        "h2 h2"
+        "mosaique mosaique"
+        "mosaique mosaique"
+        "formulaire formulaire";
+}
+h2{
+    grid-area: h2;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin:auto;
+}
+
+.mosaique {
+    grid-area: mosaique;
+    display: grid;
+    padding:0;
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(2,);
+    grid-template-areas:
+        "mosa1 mosa2"
+        "mosa3 mosa4";
+}
+
+.mosa{
+    list-style: none;
+    text-align: center;
+    outline: 2px solid green;
+}
+
+.mosa1 {
+    grid-area: mosa1;
+}
+
+.mosa2 {
+    grid-area: mosa2;
+}
+
+.mosa3 {
+    grid-area: mosa3;
+}
+
+.mosa4 {
+    grid-area: mosa4;
+}
+
+section{
+    padding:1px;
+}
+.formulaire {
+    grid-area: contact;
+    padding: 10px;
+    outline: 1px dotted black;
+    background-color:rgb(174, 179, 174);
+
+}
+/*-----footer------*/
+footer {
+    grid-area: footer;
+    background-color: rgb(7, 124, 7);
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "terms mail"
+    "socials socials"
+    "copyright copyright";
+}
+.footermail{
+    grid-area: mail;
+    padding: 0;
+    margin: 0;
+}
+
+.footerterms{
+    grid-area:terms;
+    list-style: none;
+    text-decoration: none;
+    letter-spacing: 2px;
+
+}
+.copyright{
+    grid-area:copyright;
+}
+.socials{
+    grid-area:socials;
+}
