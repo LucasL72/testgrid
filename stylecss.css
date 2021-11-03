@@ -204,6 +204,7 @@ footer {
             "contact contact contact contact"
             "footer footer footer footer"
     }
+
     header {
         grid-area: header;
         display: grid;
