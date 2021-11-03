@@ -54,11 +54,14 @@ nav {
 
 .linavbar a {
     display: block;
-    color: black;
+    color: white;
     text-align: center;
-    text-indent: 30px;
-    letter-spacing: 1px;
+    padding: 14px 16px;
+    text-decoration: none;
 }
+.linavbar a:hover {
+    background-color: #111;
+  }
 
 
 /*-----header------*/
