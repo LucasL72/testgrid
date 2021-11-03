@@ -1,9 +1,9 @@
-
 /*-----Vue d'ensemble------*/
 body {
     margin: 0;
     padding: 0;
 }
+
 .container {
     display: grid;
     grid-template-rows: 7vh 1fr auto auto auto;
@@ -15,31 +15,37 @@ body {
         "contact contact contact contact"
         "footer footer footer footer"
 }
+
 /*-----Outils flex------*/
-.row{
+.row {
     display: flex;
     flex-direction: row;
 }
-.col{
-display: flex;
-flex-direction: column;
+
+.col {
+    display: flex;
+    flex-direction: column;
 }
-.marg10 {
-    margin-left: 10%;
-    margin-right: 10%;
-}
-.marginauto{
+
+.marginauto {
     margin: auto;
 }
-.txtaligncenter{
+
+.txtaligncenter {
     text-align: center;
     justify-content: center;
+}
+
+.marg10 {
+    margin-left: 10px;
 }
 
 /*-----Navbar------*/
 nav {
     grid-area: nav;
-    justify-content: space-between;
+    color: white;
+    padding: auto auto;
+    justify-content: space-around;
     background-color: rgb(7, 124, 7);
 }
 
@@ -56,12 +62,13 @@ nav {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
+    padding: 5px 15px;
 }
+
 .linavbar a:hover {
     background-color: #111;
-  }
+}
 
 
 /*-----header------*/
@@ -100,25 +107,26 @@ main {
         "mosaique mosaique"
         "formulaire formulaire";
 }
-h2{
+
+h2 {
     grid-area: h2;
     border: 2px solid black;
     border-radius: 10px;
-    margin:auto;
+    margin: auto;
 }
 
 .mosaique {
     grid-area: mosaique;
     display: grid;
-    padding:0;
+    padding: 0;
     grid-template-rows: auto auto;
-    grid-template-columns: repeat(2,);
+    grid-template-columns: repeat(2, );
     grid-template-areas:
         "mosa1 mosa2"
         "mosa3 mosa4";
 }
 
-.mosa{
+.mosa {
     list-style: none;
     text-align: center;
     outline: 2px solid green;
@@ -140,16 +148,18 @@ h2{
     grid-area: mosa4;
 }
 
-section{
-    padding:1px;
+section {
+    padding: 1px;
 }
+
 .formulaire {
     grid-area: contact;
     padding: 10px;
     outline: 1px dotted black;
-    background-color:rgb(174, 179, 174);
+    background-color: rgb(174, 179, 174);
 
 }
+
 /*-----footer------*/
 footer {
     grid-area: footer;
@@ -157,27 +167,100 @@ footer {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "terms mail"
-    "socials socials"
-    "copyright copyright";
+    grid-template-areas:
+        "terms mail"
+        "socials socials"
+        "copyright copyright";
 }
-.footermail{
+
+.footermail {
     grid-area: mail;
-    padding: 0;
-    margin: 0;
+    text-align: right;
+    padding: 20px;
 }
 
-.footerterms{
-    grid-area:terms;
-    list-style: none;
-    text-decoration: none;
-    letter-spacing: 2px;
+.footerterms {
+    grid-area: terms;
+}
 
+.copyright {
+    grid-area: copyright;
 }
-.copyright{
-    grid-area:copyright;
+
+.socials {
+    grid-area: socials;
+    letter-spacing: 3px;
 }
-.socials{
-    grid-area:socials;
+
+@media (max-width: 576px) {
+    .container {
+        display: grid;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-columns: repeat(4);
+        grid-template-areas:
+            "nav nav nav nav"
+            "header header header header"
+            "main main main main"
+            "contact contact contact contact"
+            "footer footer footer footer"
+    }
+    header {
+        grid-area: header;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-style: double;
+        background-image: url(https://diapogram.com/_data/i/upload/2019/04/11/20190411234429-79e7caa4-me.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        border: 1px solid black;
+        max-width: 100%;
+        height: 250px;
+    }
+
+    .mosaique {
+        grid-area: mosaique;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .mosa {
+        list-style: none;
+        text-align: center;
+        outline: none;
+    }
+
+    section {
+        padding: 0;
+    }
+
+    footer {
+        grid-area: footer;
+        background-color: rgb(7, 124, 7);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footermail {
+        grid-area: mail;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .footerterms {
+        display: flex;
+        flex-direction: row;
+        grid-area: terms;
+        text-align: center;
+    }
+
+    .copyright {
+        grid-area: copyright;
+    }
+
+    .socials {
+        grid-area: socials;
+        letter-spacing: 3px;
+    }
+
 }
