@@ -1,4 +1,4 @@
 # Mon premier site en Grid
 # lien web
-https://lucasl72.github.io/testgrid/
+https://github.com/LucasL72/testgrid.git
 
