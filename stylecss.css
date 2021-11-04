@@ -15,6 +15,15 @@ body {
         "contact contact contact contact"
         "footer footer footer footer"
 }
+.btn {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50px;
+  }
+  
+  .btn:hover {
+    border: solid 1px white;
+  }
 
 /*-----Outils flex------*/
 .row {
@@ -33,13 +42,20 @@ body {
 
 .txtaligncenter {
     text-align: center;
-    justify-content: center;
 }
 
 .marg10 {
     margin-left: 10px;
 }
-
+.al-i-center {
+    display: flex;
+    align-items: center;
+  }
+  
+  .jus-ctnt-center {
+    display: flex;
+    justify-content: center;
+  }
 /*-----Navbar------*/
 nav {
     grid-area: nav;
@@ -48,7 +64,9 @@ nav {
     justify-content: space-around;
     background-color: rgb(7, 124, 7);
 }
-
+.colorw{
+    color: white;
+}
 .ulnavbar {
     list-style: none;
     overflow: hidden;
@@ -85,16 +103,10 @@ header {
     height: 400px;
 }
 
-.bg-green {
-    background-color: green;
-    margin: auto;
-}
+.bg-theme {
+    background-color: rgb(78, 148, 78);
 
-.bg-blue {
-    background-color: blue;
-    margin: auto;
 }
-
 /*-----main------*/
 main {
     grid-area: main;
@@ -156,8 +168,6 @@ section {
     grid-area: contact;
     padding: 10px;
     outline: 1px dotted black;
-    background-color: rgb(174, 179, 174);
-
 }
 
 /*-----footer------*/
@@ -176,7 +186,7 @@ footer {
 .footermail {
     grid-area: mail;
     text-align: right;
-    padding: 20px;
+    padding: 5px;
 }
 
 .footerterms {
