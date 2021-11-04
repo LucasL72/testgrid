@@ -24,6 +24,10 @@ body {
   .btn:hover {
     border: solid 1px white;
   }
+  .bg-theme {
+    background-color: rgb(78, 148, 78);
+
+}
 
 /*-----Outils flex------*/
 .row {
@@ -59,7 +63,6 @@ body {
 /*-----Navbar------*/
 nav {
     grid-area: nav;
-    color: white;
     padding: auto auto;
     justify-content: space-around;
     background-color: rgb(7, 124, 7);
@@ -103,10 +106,6 @@ header {
     height: 400px;
 }
 
-.bg-theme {
-    background-color: rgb(78, 148, 78);
-
-}
 /*-----main------*/
 main {
     grid-area: main;
@@ -142,6 +141,7 @@ h2 {
     list-style: none;
     text-align: center;
     outline: 2px solid green;
+    border-radius: 20px;
 }
 
 .mosa1 {
@@ -167,7 +167,8 @@ section {
 .formulaire {
     grid-area: contact;
     padding: 10px;
-    outline: 1px dotted black;
+    border: 1px dotted black;
+    background-color: grey;
 }
 
 /*-----footer------*/
