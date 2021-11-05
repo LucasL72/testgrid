@@ -161,7 +161,7 @@ h2 {
 .mosagridr {
     display: grid;
     grid-template-rows: 7vh auto 7vh;
-    grid-template-columns: 60vw 40vw;
+    grid-template-columns: 59vw 40vw;
     grid-template-areas:
         "titre img"
         "txt img"
@@ -171,7 +171,7 @@ h2 {
 .mosagridl {
     display: grid;
     grid-template-rows: 7vh auto 7vh;
-    grid-template-columns: 40vw 60vw;
+    grid-template-columns: 40vw 59vw;
     grid-template-areas:
         "img titre"
         "img txt"
@@ -244,7 +244,7 @@ footer {
 .footermail {
     grid-area: mail;
     text-align: right;
-    padding: 5px;
+    padding:5px;
 }
 
 .footerterms {
